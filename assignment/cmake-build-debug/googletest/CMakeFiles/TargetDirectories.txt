@@ -1,0 +1,3 @@
+/mnt/c/Users/pavel/Desktop/IVS/assignment/cmake-build-debug/googletest/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/pavel/Desktop/IVS/assignment/cmake-build-debug/googletest/CMakeFiles/edit_cache.dir
+/mnt/c/Users/pavel/Desktop/IVS/assignment/cmake-build-debug/googletest/CMakeFiles/googletest.dir

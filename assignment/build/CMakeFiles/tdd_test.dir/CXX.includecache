@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/pavel/Desktop/IVS/assignment/tdd_code.cpp
+stdlib.h
+-
+stdio.h
+-
+tdd_code.h
+/mnt/c/Users/pavel/Desktop/IVS/assignment/tdd_code.h
+
+/mnt/c/Users/pavel/Desktop/IVS/assignment/tdd_code.h
+

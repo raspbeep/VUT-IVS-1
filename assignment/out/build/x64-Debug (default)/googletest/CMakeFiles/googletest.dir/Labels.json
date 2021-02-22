@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/CMakeFiles/googletest"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "C:/Users/pavel/Desktop/IVS/assignment/out/build/x64-Debug (default)/googletest/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}
