@@ -234,6 +234,37 @@ TEST_F(Matrixx, SolveByCramersRule) {
     // cramer nad maticou 1x1
 }
 
+TEST_F(Matrixx, CramerOneByOneMatrix) {
+    Matrix m1x1{1, 1};
+    m1x1.set(0, 0, 1);
+    std::vector<double> right_side = {1};
+    std::vector<double> result = {1};
+    EXPECT_EQ(m1x1.solveEquation(right_side), result);
+
+}
+
+TEST_F(Matrixx, CramerBiggerRightSide) {
+    Matrix m1x1{1, 1};
+    m1x1.set(0, 0, 1);
+    std::vector<double> right_side = {1,1};
+    EXPECT_ANY_THROW(m1x1.solveEquation(right_side));
+}
+TEST_F(Matrixx, CramerNotSquareMatrix) {
+    Matrix m1x1{1, 2};
+    m1x1.set(0, 0, 1);
+    m1x1.set(0, 1, 2);
+    std::vector<double> right_side = {1, 2};
+    EXPECT_ANY_THROW(m1x1.solveEquation(right_side));
+}
+
+TEST_F(Matrixx, CramerSingularMatrix) {
+    Matrix m1x1{2, 2};
+    m1x1.set(0, 0, 1);
+    m1x1.set(0, 1, 2);
+    std::vector<double> right_side = {1, 2};
+    EXPECT_ANY_THROW(m1x1.solveEquation(right_side));
+}
+
 TEST_F(Matrixx, TransposeMatrix) {
     Matrix  target_matrix{2, 3},
             correct_transposed{3, 2},
@@ -261,7 +292,76 @@ TEST_F(Matrixx, TransposeMatrix) {
     EXPECT_TRUE(target_matrix.transpose() == correct_transposed);
 }
 
-TEST_F(Matrixx, InverseMatrix)
+TEST_F(Matrixx, InverseMatrix3x3){
+    Matrix target_matrix{3, 3},
+           inverse_matrix{3, 3};
 
+    target_matrix.set(0, 0, 3);
+    target_matrix.set(0, 1, -4);
+    target_matrix.set(0, 2, 5);
 
+    target_matrix.set(1, 0, 2);
+    target_matrix.set(1, 1, -3);
+    target_matrix.set(1, 2, 1);
+
+    target_matrix.set(2, 0, 3);
+    target_matrix.set(2, 1, -5);
+    target_matrix.set(2, 2, -1);
+
+    inverse_matrix.set(0, 0, -8);
+    inverse_matrix.set(0, 1, 29);
+    inverse_matrix.set(0, 2, -11);
+
+    inverse_matrix.set(1, 0, -5);
+    inverse_matrix.set(1, 1, 18);
+    inverse_matrix.set(1, 2, -7);
+
+    inverse_matrix.set(2, 0, 1);
+    inverse_matrix.set(2, 1, -3);
+    inverse_matrix.set(2, 2, 1);
+
+    EXPECT_EQ(target_matrix.inverse(), inverse_matrix);
+}
+
+TEST_F(Matrixx, InverseMatrix2x2) {
+    Matrix target_matrix{2, 2},
+           inverse_matrix{2, 2};
+
+    target_matrix.set(0, 0, 5);
+    target_matrix.set(0, 1, 2);
+
+    target_matrix.set(1, 0, -7);
+    target_matrix.set(1, 1, -3);
+
+    inverse_matrix.set(0, 0, 3);
+    inverse_matrix.set(0, 1, 2);
+
+    inverse_matrix.set(1, 0, -7);
+    inverse_matrix.set(1, 1, -5);
+
+    EXPECT_EQ(target_matrix.inverse(), inverse_matrix);
+}
+
+TEST_F(Matrixx, InverseBiggerMatrix){
+    Matrix m4x4 = {4, 4};
+    EXPECT_ANY_THROW(m4x4.inverse());
+}
+
+TEST_F(Matrixx, InverseSingularMatrix) {
+    Matrix m2x2 = {2, 2};
+    m2x2.set(0, 0, 1);
+    m2x2.set(0, 1, 2);
+
+    EXPECT_ANY_THROW(m2x2.inverse());
+}
+
+TEST_F(Matrixx, SolveMatrix4x4) {
+    Matrix m4x4 = {4, 4};
+
+    std::vector<std::vector<double>> target_template = {{1, 0, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+    std::vector<double> right_side_and_result = {1, 1, 1, 1};
+
+    EXPECT_NO_THROW(m4x4.set(target_template));
+    EXPECT_EQ(m4x4.solveEquation(right_side_and_result), right_side_and_result);
+}
 /*** Konec souboru white_box_tests.cpp ***/
